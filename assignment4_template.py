@@ -15,20 +15,66 @@ class IteratorClass:
 
     # BEGIN SOLUTION
     def __init__(self, input_1, input_2, operator):
+
+        # Assigning attributes to the class
         self.input_1 = input_1
         self.input_2 = input_2
         self.operator = operator
+        self.limit = len(input_1)
 
+        # Validation code for data types
         valid_operators = ["+", "-", "/", "*"]
         isValidList1 = True if (type(self.input_1) == list or type(
             self.input_1) == tuple) else False
         isValidList2 = True if (type(self.input_2) == list or type(
             self.input_2) == tuple) else False
         isValidOperator = True if (self.operator in valid_operators) else False
-        if (not isValidList1 or not isValidList2 or not isValidOperator):
+
+        if (isValidList1 and isValidList2 and isValidOperator):
+            pass
+        else:
             raise ValueError(
-                "Inconsistent Data Types, please re-enter data in the valid data types")
-        pass
+                "Inconsistent data types, please re-enter data in the valid data types")
+
+        # Handling print() for the class
+
+        def __str__(self):
+            return f" First List/Tuple: [{', '.join(map(str, self.input_1))}] " + f" Second List/Tuple: [{', '.join(map(str, self.input_2))}]"
+
+        # Iter
+        def __iter__(self):
+            self.value = 0
+            return self
+
+        def __next__(self):
+            if self.value < self.limit:
+                # Addition (+)
+                if self.operator == "+":
+                    output = self.input1[self.value] + self.input1[self.value]
+                    self.value += 1
+                    return output
+                
+                # Subtraction (-)
+                if self.operator == "-":
+                    output = self.input1[self.value] - self.input1[self.value]
+                    self.value += 1
+                    return output
+                
+                # Multiplication (*)
+                if self.operator == "*":
+                    output = self.input1[self.value] * self.input1[self.value]
+                    self.value += 1
+                    return output
+                
+                # Division (/)    
+                if self.operator == "/":
+                    output = round(
+                        self.input1[self.value] / self.input1[self.value], 2)
+                    self.value += 1
+                    return output
+            else:
+                raise StopIteration
+
     # END SOLUTION
 
 
