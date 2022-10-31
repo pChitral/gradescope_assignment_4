@@ -14,7 +14,7 @@ class IteratorClass:
     # Raise ValueError when the operator is not add, sub, mul, or div.
 
     # BEGIN SOLUTION
-    def __init__(self,list1, list2, operator):
+    def __init__(self, list1, list2, operator):
         self.input_1 = list1
         self.input_2 = list2
         self.operator = operator
@@ -33,33 +33,34 @@ class IteratorClass:
         else:
             raise ValueError(
                 "Inconsistent data types, please re-enter data in the valid data types")
-        
-        # Length validation 
-        if len(self.input_1) != len(self.input_2): raise ValueError(
+
+        # Length validation
+        if len(self.input_1) != len(self.input_2):
+            raise ValueError(
                 "Inconsistent data types, please re-enter data in the valid data types")
-    
-    
+
     def __iter__(self):
         return self
+
     def __next__(self):
         if self.index >= len(self.input_1):
             raise StopIteration
         if self.operator == "add":
             index = self.index
-            self.index+=1
+            self.index += 1
             return self.input_1[index] + self.input_2[index]
         if self.operator == "sub":
             index = self.index
-            self.index+=1
+            self.index += 1
             return self.input_1[index] - self.input_2[index]
         if self.operator == "mul":
             index = self.index
-            self.index+=1
+            self.index += 1
             return self.input_1[index] * self.input_2[index]
         if self.operator == "div":
             index = self.index
-            self.index+=1
-            return round(self.input_1[index] / self.input_2[index],2)
+            self.index += 1
+            return round(self.input_1[index] / self.input_2[index], 2)
 
     # END SOLUTION
 
