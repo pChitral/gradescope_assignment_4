@@ -19,8 +19,8 @@ class IteratorClass:
         # Assigning attributes to the class
         self.input_1 = input_1
         self.input_2 = input_2
-        self.operator = str(operator)
-        self.limit = len(input_1)
+        self.operator = operator
+        self.index = 0
 
         # Validation code for data types
         valid_operators = ["add", "sub", "div", "mul"]
@@ -35,6 +35,10 @@ class IteratorClass:
         else:
             raise ValueError(
                 "Inconsistent data types, please re-enter data in the valid data types")
+        
+        # Length validation 
+        if len(self.input_1) != len(self.input_2): raise ValueError(
+                "Inconsistent data types, please re-enter data in the valid data types")
 
         # Handling print() for the class
 
@@ -43,37 +47,42 @@ class IteratorClass:
 
         # Iter
         def __iter__(self):
-            self.value = 0
             return self
 
         def __next__(self):
-            if self.value < self.limit:
-                # Addition (+)
-                if self.operator == "add":
-                    output = self.input1[self.value] + self.input1[self.value]
-                    self.value += 1
-                    return output
-                
-                # Subtraction (-)
-                if self.operator == "sub":
-                    output = self.input1[self.value] - self.input1[self.value]
-                    self.value += 1
-                    return output
-                
-                # Multiplication (*)
-                if self.operator == "mul":
-                    output = self.input1[self.value] * self.input1[self.value]
-                    self.value += 1
-                    return output
-                
-                # Division (/)    
-                if self.operator == "div":
-                    output = round(
-                        self.input1[self.value] / self.input1[self.value], 2)
-                    self.value += 1
-                    return output
-            else:
+
+            if self.index >= len(self.input_1):
                 raise StopIteration
+            # Addition (+)
+            if self.operator == "add":
+                index = self.index
+                self.index += 1
+                return self.input_1[index] + self.input_2[index]
+
+            # Subtraction (-)
+            if self.operator == "sub":
+                if self.operator == "add":
+                    index = self.index
+                    self.index += 1
+                    output = self.input_1[index] - self.input_2[index]
+                    return output
+
+            # Multiplication (*)
+            if self.operator == "mul":
+                if self.operator == "add":
+                    index = self.index
+                    self.index += 1
+                    output = self.input_1[index] * self.input_2[index]
+                    return output
+
+            # Division (/)
+            if self.operator == "div":
+                if self.operator == "add":
+                    index = self.index
+                    self.index += 1
+                    output = round(
+                        self.input_1[self.value] / self.input_2[self.value], 2)
+                    return output
 
     # END SOLUTION
 
