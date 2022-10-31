@@ -19,11 +19,11 @@ class IteratorClass:
         # Assigning attributes to the class
         self.input_1 = input_1
         self.input_2 = input_2
-        self.operator = operator
+        self.operator = str(operator)
         self.limit = len(input_1)
 
         # Validation code for data types
-        valid_operators = ["+", "-", "/", "*"]
+        valid_operators = ["add", "sub", "div", "mul"]
         isValidList1 = True if (type(self.input_1) == list or type(
             self.input_1) == tuple) else False
         isValidList2 = True if (type(self.input_2) == list or type(
@@ -49,25 +49,25 @@ class IteratorClass:
         def __next__(self):
             if self.value < self.limit:
                 # Addition (+)
-                if self.operator == "+":
+                if self.operator == "add":
                     output = self.input1[self.value] + self.input1[self.value]
                     self.value += 1
                     return output
                 
                 # Subtraction (-)
-                if self.operator == "-":
+                if self.operator == "sub":
                     output = self.input1[self.value] - self.input1[self.value]
                     self.value += 1
                     return output
                 
                 # Multiplication (*)
-                if self.operator == "*":
+                if self.operator == "mul":
                     output = self.input1[self.value] * self.input1[self.value]
                     self.value += 1
                     return output
                 
                 # Division (/)    
-                if self.operator == "/":
+                if self.operator == "div":
                     output = round(
                         self.input1[self.value] / self.input1[self.value], 2)
                     self.value += 1
