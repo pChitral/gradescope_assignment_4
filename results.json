@@ -23,41 +23,36 @@
         },
         {
             "name": "test_IteratorClass_4 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: 'IteratorClass' object is not iterable\n",
             "visibility": "visible",
             "number": "1.4"
         },
         {
             "name": "test_IteratorClass_5 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: 'IteratorClass' object is not iterable\n",
             "visibility": "visible",
             "number": "1.5"
         },
         {
             "name": "test_IteratorClass_6 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: 'IteratorClass' object is not iterable\n",
             "visibility": "visible",
             "number": "1.6"
         },
         {
             "name": "test_IteratorClass_7 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: 'IteratorClass' object is not iterable\n",
             "visibility": "visible",
             "number": "1.7"
         },
         {
             "name": "test_IteratorClass_8 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: False != True\n",
             "visibility": "visible",
             "number": "1.8"
         },
@@ -281,5 +276,5 @@
     "leaderboard": [],
     "visibility": "visible",
     "execution_time": "0.00",
-    "score": 9.0
+    "score": 24.0
 }

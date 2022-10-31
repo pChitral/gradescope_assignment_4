@@ -14,11 +14,9 @@ class IteratorClass:
     # Raise ValueError when the operator is not add, sub, mul, or div.
 
     # BEGIN SOLUTION
-    def __init__(self, input_1, input_2, operator):
-
-        # Assigning attributes to the class
-        self.input_1 = input_1
-        self.input_2 = input_2
+    def __init__(self,list1, list2, operator):
+        self.input_1 = list1
+        self.input_2 = list2
         self.operator = operator
         self.index = 0
 
@@ -39,50 +37,29 @@ class IteratorClass:
         # Length validation 
         if len(self.input_1) != len(self.input_2): raise ValueError(
                 "Inconsistent data types, please re-enter data in the valid data types")
-
-        # Handling print() for the class
-
-        def __str__(self):
-            return f" First List/Tuple: [{', '.join(map(str, self.input_1))}] " + f" Second List/Tuple: [{', '.join(map(str, self.input_2))}]"
-
-        # Iter
-        def __iter__(self):
-            return self
-
-        def __next__(self):
-
-            if self.index >= len(self.input_1):
-                raise StopIteration
-            # Addition (+)
-            if self.operator == "add":
-                index = self.index
-                self.index += 1
-                return self.input_1[index] + self.input_2[index]
-
-            # Subtraction (-)
-            if self.operator == "sub":
-                if self.operator == "add":
-                    index = self.index
-                    self.index += 1
-                    output = self.input_1[index] - self.input_2[index]
-                    return output
-
-            # Multiplication (*)
-            if self.operator == "mul":
-                if self.operator == "add":
-                    index = self.index
-                    self.index += 1
-                    output = self.input_1[index] * self.input_2[index]
-                    return output
-
-            # Division (/)
-            if self.operator == "div":
-                if self.operator == "add":
-                    index = self.index
-                    self.index += 1
-                    output = round(
-                        self.input_1[self.value] / self.input_2[self.value], 2)
-                    return output
+    
+    
+    def __iter__(self):
+        return self
+    def __next__(self):
+        if self.index >= len(self.input_1):
+            raise StopIteration
+        if self.operator == "add":
+            index = self.index
+            self.index+=1
+            return self.input_1[index] + self.input_2[index]
+        if self.operator == "sub":
+            index = self.index
+            self.index+=1
+            return self.input_1[index] - self.input_2[index]
+        if self.operator == "mul":
+            index = self.index
+            self.index+=1
+            return self.input_1[index] * self.input_2[index]
+        if self.operator == "div":
+            index = self.index
+            self.index+=1
+            return round(self.input_1[index] / self.input_2[index],2)
 
     # END SOLUTION
 
