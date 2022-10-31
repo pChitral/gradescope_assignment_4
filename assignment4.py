@@ -37,26 +37,36 @@ class IteratorClass:
         # Length validation
         if len(self.input_1) != len(self.input_2):
             raise ValueError(
-                "Inconsistent data types, please re-enter data in the valid data types")
+                "Inconsistent length of lists, please re-enter lists with same length")
 
     def __iter__(self):
         return self
 
     def __next__(self):
+
+        # Exit of our loop
         if self.index >= len(self.input_1):
             raise StopIteration
+
+        # Addition (+)
         if self.operator == "add":
             index = self.index
             self.index += 1
             return self.input_1[index] + self.input_2[index]
+
+        # Subtraction (-)
         if self.operator == "sub":
             index = self.index
             self.index += 1
             return self.input_1[index] - self.input_2[index]
+
+        # Multiplication (*)
         if self.operator == "mul":
             index = self.index
             self.index += 1
             return self.input_1[index] * self.input_2[index]
+
+        # Division (/)
         if self.operator == "div":
             index = self.index
             self.index += 1
