@@ -97,88 +97,88 @@ class ListV2:
                 "Inconsistent data type! Please re-enter data which either has the data type list or tuple.")
 
         # Handing + operator overloading
-        def __add__(self, other):
-            temp_list = []
-            if type(other) in (list, tuple):
-                for i in range(len(self.iterable)):
-                    temp_list.append(self.iterable[i] + other[i])
-                return (ListV2(temp_list))
+    def __add__(self, other):
+        temp_list = []
+        if type(other) in (list, tuple):
+            for i in range(len(self.iterable)):
+                temp_list.append(self.iterable[i] + other[i])
+            return (ListV2(temp_list))
 
-            if type(other) in (ListV2):
-                for i in range(len(self.iterable)):
-                    temp_list.append(self.iterable[i] + other.iterable[i])
-                return (ListV2(temp_list))
+        if type(other) in (ListV2):
+            for i in range(len(self.iterable)):
+                temp_list.append(self.iterable[i] + other.iterable[i])
+            return (ListV2(temp_list))
 
-            if type(other) in (float, int):
-                for i in range(len(self.iterable)):
-                    temp_list.append(self.iterable[i] + other)
-                return (ListV2(temp_list))
+        if type(other) in (float, int):
+            for i in range(len(self.iterable)):
+                temp_list.append(self.iterable[i] + other)
+            return (ListV2(temp_list))
 
-        # Handing - operator overloading
-        def __sub__(self, other):
-            temp_list = []
-            if type(other) in (list, tuple):
-                for i in range(len(self.iterable)):
-                    temp_list.append(self.iterable[i] - other[i])
-                return (ListV2(temp_list))
+    # Handing - operator overloading
+    def __sub__(self, other):
+        temp_list = []
+        if type(other) in (list, tuple):
+            for i in range(len(self.iterable)):
+                temp_list.append(self.iterable[i] - other[i])
+            return (ListV2(temp_list))
 
-            if type(other) in (ListV2):
-                for i in range(len(self.iterable)):
-                    temp_list.append(self.iterable[i] - other.iterable[i])
-                return (ListV2(temp_list))
+        if type(other) in (ListV2):
+            for i in range(len(self.iterable)):
+                temp_list.append(self.iterable[i] - other.iterable[i])
+            return (ListV2(temp_list))
 
-            if type(other) in (float, int):
-                for i in range(len(self.iterable)):
-                    temp_list.append(self.iterable[i] - other)
-                return (ListV2(temp_list))
+        if type(other) in (float, int):
+            for i in range(len(self.iterable)):
+                temp_list.append(self.iterable[i] - other)
+            return (ListV2(temp_list))
 
-        # Handing * operator overloading
-        def __mul__(self, other):
-            temp_list = []
-            if type(other) in (list, tuple):
-                for i in range(len(self.iterable)):
-                    temp_list.append(self.iterable[i] * other[i])
-                return (ListV2(temp_list))
+# Handing * operator overloading
+    def __mul__(self, other):
+        temp_list = []
+        if type(other) in (list, tuple):
+            for i in range(len(self.iterable)):
+                temp_list.append(self.iterable[i] * other[i])
+            return (ListV2(temp_list))
 
-            if type(other) in (ListV2):
-                for i in range(len(self.iterable)):
-                    temp_list.append(self.iterable[i] * other.iterable[i])
-                return (ListV2(temp_list))
+        if type(other) in (ListV2):
+            for i in range(len(self.iterable)):
+                temp_list.append(self.iterable[i] * other.iterable[i])
+            return (ListV2(temp_list))
 
-            if type(other) in (float, int):
-                for i in range(len(self.iterable)):
-                    temp_list.append(self.iterable[i] * other)
-                return (ListV2(temp_list))
+        if type(other) in (float, int):
+            for i in range(len(self.iterable)):
+                temp_list.append(self.iterable[i] * other)
+            return (ListV2(temp_list))
 
-        # Handing / operator overloading
-        def __truediv__(self, other):
-            temp_list = []
-            if type(other) in (list, tuple):
-                for i in range(len(self.iterable)):
-                    temp_list.append(round(self.iterable[i] / other[i], 2))
-                return (ListV2(temp_list))
+    # Handing / operator overloading
+    def __truediv__(self, other):
+        temp_list = []
+        if type(other) in (list, tuple):
+            for i in range(len(self.iterable)):
+                temp_list.append(round(self.iterable[i] / other[i], 2))
+            return (ListV2(temp_list))
 
-            if type(other) in (ListV2):
-                for i in range(len(self.iterable)):
-                    temp_list.append(round(self.iterable[i] / other[i], 2))
-                return (ListV2(temp_list))
+        if type(other) in (ListV2):
+            for i in range(len(self.iterable)):
+                temp_list.append(round(self.iterable[i] / other[i], 2))
+            return (ListV2(temp_list))
 
-            if type(other) in (float, int):
-                for i in range(len(self.iterable)):
-                    temp_list.append(round(self.iterable[i] / other[i], 2))
-                return (ListV2(temp_list))
+        if type(other) in (float, int):
+            for i in range(len(self.iterable)):
+                temp_list.append(round(self.iterable[i] / other[i], 2))
+            return (ListV2(temp_list))
 
-        def __iter__(self):
-            self.index = 0
-            return self
+    def __iter__(self):
+        self.index = 0
+        return self
 
-        def __next__(self):
-            if self.index < len(self.iterable):
-                ans = self.iterable[self.index]
-                self.index += 1
-                return ans
-            else:
-                raise StopIteration
+    def __next__(self):
+        if self.index < len(self.iterable):
+            ans = self.iterable[self.index]
+            self.index += 1
+            return ans
+        else:
+            raise StopIteration
 
     # END SOLUTION
 

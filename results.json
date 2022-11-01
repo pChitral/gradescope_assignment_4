@@ -67,7 +67,7 @@
             "name": "test_ListV2_10 (test_assignment4.TestAssignment4)",
             "score": 0.0,
             "max_score": 3,
-            "output": "Test Failed: unsupported operand type(s) for -: 'ListV2' and 'int'\n",
+            "output": "Test Failed: argument of type 'type' is not iterable\n",
             "visibility": "visible",
             "number": "2.10"
         },
@@ -75,7 +75,7 @@
             "name": "test_ListV2_11 (test_assignment4.TestAssignment4)",
             "score": 0.0,
             "max_score": 3,
-            "output": "Test Failed: unsupported operand type(s) for *: 'ListV2' and 'int'\n",
+            "output": "Test Failed: argument of type 'type' is not iterable\n",
             "visibility": "visible",
             "number": "2.11"
         },
@@ -83,39 +83,35 @@
             "name": "test_ListV2_12 (test_assignment4.TestAssignment4)",
             "score": 0.0,
             "max_score": 3,
-            "output": "Test Failed: unsupported operand type(s) for /: 'ListV2' and 'int'\n",
+            "output": "Test Failed: argument of type 'type' is not iterable\n",
             "visibility": "visible",
             "number": "2.12"
         },
         {
             "name": "test_ListV2_13 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: unsupported operand type(s) for +: 'ListV2' and 'list'\n",
             "visibility": "visible",
             "number": "2.13"
         },
         {
             "name": "test_ListV2_14 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: unsupported operand type(s) for -: 'ListV2' and 'list'\n",
             "visibility": "visible",
             "number": "2.14"
         },
         {
             "name": "test_ListV2_15 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: can't multiply sequence by non-int of type 'ListV2'\n",
             "visibility": "visible",
             "number": "2.15"
         },
         {
             "name": "test_ListV2_16 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: unsupported operand type(s) for /: 'ListV2' and 'tuple'\n",
             "visibility": "visible",
             "number": "2.16"
         },
@@ -123,15 +119,14 @@
             "name": "test_ListV2_17 (test_assignment4.TestAssignment4)",
             "score": 0.0,
             "max_score": 3,
-            "output": "Test Failed: '<assignment4.ListV2 object at 0x7faca03ae100>' != '[5, 6, 7, 8, 9]'\n- <assignment4.ListV2 object at 0x7faca03ae100>\n+ [5, 6, 7, 8, 9]\n\n",
+            "output": "Test Failed: '<assignment4.ListV2 object at 0x7fadf81d6940>' != '[5, 6, 7, 8, 9]'\n- <assignment4.ListV2 object at 0x7fadf81d6940>\n+ [5, 6, 7, 8, 9]\n\n",
             "visibility": "visible",
             "number": "2.17"
         },
         {
             "name": "test_ListV2_18 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: False != True\n",
             "visibility": "visible",
             "number": "2.18"
         },
@@ -153,7 +148,7 @@
             "name": "test_ListV2_4 (test_assignment4.TestAssignment4)",
             "score": 0.0,
             "max_score": 3,
-            "output": "Test Failed: unsupported operand type(s) for +: 'ListV2' and 'ListV2'\n",
+            "output": "Test Failed: argument of type 'type' is not iterable\n",
             "visibility": "visible",
             "number": "2.4"
         },
@@ -161,7 +156,7 @@
             "name": "test_ListV2_5 (test_assignment4.TestAssignment4)",
             "score": 0.0,
             "max_score": 3,
-            "output": "Test Failed: unsupported operand type(s) for +: 'ListV2' and 'ListV2'\n",
+            "output": "Test Failed: argument of type 'type' is not iterable\n",
             "visibility": "visible",
             "number": "2.5"
         },
@@ -169,7 +164,7 @@
             "name": "test_ListV2_6 (test_assignment4.TestAssignment4)",
             "score": 0.0,
             "max_score": 3,
-            "output": "Test Failed: unsupported operand type(s) for -: 'ListV2' and 'ListV2'\n",
+            "output": "Test Failed: argument of type 'type' is not iterable\n",
             "visibility": "visible",
             "number": "2.6"
         },
@@ -177,7 +172,7 @@
             "name": "test_ListV2_7 (test_assignment4.TestAssignment4)",
             "score": 0.0,
             "max_score": 3,
-            "output": "Test Failed: unsupported operand type(s) for *: 'ListV2' and 'ListV2'\n",
+            "output": "Test Failed: argument of type 'type' is not iterable\n",
             "visibility": "visible",
             "number": "2.7"
         },
@@ -185,7 +180,7 @@
             "name": "test_ListV2_8 (test_assignment4.TestAssignment4)",
             "score": 0.0,
             "max_score": 3,
-            "output": "Test Failed: unsupported operand type(s) for /: 'ListV2' and 'ListV2'\n",
+            "output": "Test Failed: argument of type 'type' is not iterable\n",
             "visibility": "visible",
             "number": "2.8"
         },
@@ -193,7 +188,7 @@
             "name": "test_ListV2_9 (test_assignment4.TestAssignment4)",
             "score": 0.0,
             "max_score": 3,
-            "output": "Test Failed: unsupported operand type(s) for +: 'ListV2' and 'int'\n",
+            "output": "Test Failed: argument of type 'type' is not iterable\n",
             "visibility": "visible",
             "number": "2.9"
         },
@@ -273,5 +268,5 @@
     "leaderboard": [],
     "visibility": "visible",
     "execution_time": "0.00",
-    "score": 33.0
+    "score": 48.0
 }
