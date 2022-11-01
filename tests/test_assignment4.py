@@ -100,8 +100,8 @@ class TestAssignment4(unittest.TestCase):
     @number("2.4")
     def test_ListV2_4(self):
         l1 = assignment4.ListV2(list(range(5, 10)))
-        l2 = assignment4.ListV2(list(range(50, 55)))
-        result = l1 + l2
+        other = assignment4.ListV2(list(range(50, 55)))
+        result = l1 + other
         self.assertEqual(type(result),  assignment4.ListV2)
 
     @weight(3)
@@ -109,8 +109,8 @@ class TestAssignment4(unittest.TestCase):
     @number("2.5")
     def test_ListV2_5(self):
         l1 = assignment4.ListV2(list(range(5, 10)))
-        l2 = assignment4.ListV2(list(range(50, 55)))
-        result = l1 + l2
+        other = assignment4.ListV2(list(range(50, 55)))
+        result = l1 + other
         self.assertEqual([ele for ele in result],  [55, 57, 59, 61, 63])
 
     @weight(3)
@@ -118,8 +118,8 @@ class TestAssignment4(unittest.TestCase):
     @number("2.6")
     def test_ListV2_6(self):
         l1 = assignment4.ListV2(list(range(5, 10)))
-        l2 = assignment4.ListV2(list(range(50, 55)))
-        result = l1 - l2
+        other = assignment4.ListV2(list(range(50, 55)))
+        result = l1 - other
         self.assertEqual([ele for ele in result],  [-45, -45, -45, -45, -45])
 
     @weight(3)
@@ -127,8 +127,8 @@ class TestAssignment4(unittest.TestCase):
     @number("2.7")
     def test_ListV2_7(self):
         l1 = assignment4.ListV2(list(range(5, 10)))
-        l2 = assignment4.ListV2(list(range(50, 55)))
-        result = l1 * l2
+        other = assignment4.ListV2(list(range(50, 55)))
+        result = l1 * other
         self.assertEqual([ele for ele in result],  [250, 306, 364, 424, 486])
 
     @weight(3)
@@ -136,8 +136,8 @@ class TestAssignment4(unittest.TestCase):
     @number("2.8")
     def test_ListV2_8(self):
         l1 = assignment4.ListV2(list(range(5, 10)))
-        l2 = assignment4.ListV2(list(range(50, 55)))
-        result = l1 / l2
+        other = assignment4.ListV2(list(range(50, 55)))
+        result = l1 / other
         self.assertEqual([ele for ele in result],  [
                          0.1, 0.12, 0.13, 0.15, 0.17])
 
@@ -178,8 +178,8 @@ class TestAssignment4(unittest.TestCase):
     @number("2.13")
     def test_ListV2_13(self):
         l1 = assignment4.ListV2(list(range(5, 10)))
-        l2 = list(range(50, 55))
-        result = l1 + l2
+        other = list(range(50, 55))
+        result = l1 + other
         self.assertEqual([ele for ele in result],  [55, 57, 59, 61, 63])
 
     @weight(3)
@@ -187,8 +187,8 @@ class TestAssignment4(unittest.TestCase):
     @number("2.14")
     def test_ListV2_14(self):
         l1 = assignment4.ListV2(list(range(5, 10)))
-        l2 = list(range(50, 55))
-        result = l1 - l2
+        other = list(range(50, 55))
+        result = l1 - other
         self.assertEqual([ele for ele in result],  [-45, -45, -45, -45, -45])
 
     @weight(3)
@@ -196,8 +196,8 @@ class TestAssignment4(unittest.TestCase):
     @number("2.15")
     def test_ListV2_15(self):
         l1 = assignment4.ListV2(list(range(5, 10)))
-        l2 = tuple(range(50, 55))
-        result = l1 * l2
+        other = tuple(range(50, 55))
+        result = l1 * other
         self.assertEqual([ele for ele in result],  [250, 306, 364, 424, 486])
 
     @weight(3)
@@ -205,8 +205,8 @@ class TestAssignment4(unittest.TestCase):
     @number("2.16")
     def test_ListV2_16(self):
         l1 = assignment4.ListV2(list(range(5, 10)))
-        l2 = tuple(range(50, 55))
-        result = l1 / l2
+        other = tuple(range(50, 55))
+        result = l1 / other
         self.assertEqual([ele for ele in result],  [0.1, 0.12, 0.13, 0.15, 0.17])
 
     @weight(3)
