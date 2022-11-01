@@ -87,7 +87,98 @@ class ListV2:
     # NOTE: For the / operator, round to two decimal places
 
     # BEGIN SOLUTION
-    pass
+    def __init__(self, iterable):
+        self.iterable = iterable
+        self.index = 0
+
+        # Validating data types of the input
+        allowed_datatypes = [list, tuple]
+        if type(self.iterable) not in allowed_datatypes:
+            raise ValueError(
+                "Inconsistent data type! Please re-enter data which either has the data type list or tuple.")
+
+        # Handing + operator overloading
+        def __add__(self, other):
+            if type(other) == list or type(other) == tuple:
+                for i in range(len(self.iterable)):
+                    temp_list[i] = self.iterable[i] + other[i]
+                    return (ListV2(temp_list))
+
+            if type(other) == ListV2:
+                for i in range(len(self.iterable)):
+                    temp_list[i] = self.iterable[i] + other.iterable[i]
+                    return (ListV2(temp_list))
+
+            if type(other) == float or type(other) == int:
+                temp_list = []
+                for i in range(len(self.iterable)):
+                    temp_list[i] = self.iterable[i] + other
+                return (ListV2(temp_list))
+
+        # Handing - operator overloading
+        def __sub__(self, other):
+            if type(other) == list or type(other) == tuple:
+                for i in range(len(self.iterable)):
+                    temp_list[i] = self.iterable[i] - other[i]
+                    return (ListV2(temp_list))
+
+            if type(other) == ListV2:
+                for i in range(len(self.iterable)):
+                    temp_list[i] = self.iterable[i] - other.iterable[i]
+                    return (ListV2(temp_list))
+
+            if type(other) == float or type(other) == int:
+                temp_list = []
+                for i in range(len(self.iterable)):
+                    temp_list[i] = self.iterable[i] - other
+                return (ListV2(temp_list))
+
+        # Handing * operator overloading
+        def __mul__(self, other):
+            if type(other) == list or type(other) == tuple:
+                for i in range(len(self.iterable)):
+                    temp_list[i] = self.iterable[i] * other[i]
+                    return (ListV2(temp_list))
+
+            if type(other) == ListV2:
+                for i in range(len(self.iterable)):
+                    temp_list[i] = self.iterable[i] * other.iterable[i]
+                    return (ListV2(temp_list))
+
+            if type(other) == float or type(other) == int:
+                temp_list = []
+                for i in range(len(self.iterable)):
+                    temp_list[i] = self.iterable[i] * other
+                return (ListV2(temp_list))
+
+        # Handing / operator overloading
+        def __truediv__(self, other):
+            if type(other) == list or type(other) == tuple:
+                for i in range(len(self.iterable)):
+                    temp_list[i] = round(self.iterable[i] / other[i], 2)
+                    return (ListV2(temp_list))
+
+            if type(other) == ListV2:
+                for i in range(len(self.iterable)):
+                    temp_list[i] =round(self.iterable[i] / other[i], 2)
+                    return (ListV2(temp_list))
+
+            if type(other) == float or type(other) == int:
+                temp_list = []
+                for i in range(len(self.iterable)):
+                    temp_list[i] = round(self.iterable[i] / other[i], 2)
+                return (ListV2(temp_list))
+
+        def __iter__(self):
+            return self
+
+        def __next__(self):
+            if self.index >= len(self.iterable):
+                raise StopIteration
+            index = self.index
+            self.index += 1
+            return 1
+
     # END SOLUTION
 
 
