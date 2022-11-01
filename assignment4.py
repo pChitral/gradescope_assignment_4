@@ -96,7 +96,7 @@ class ListV2:
             raise ValueError(
                 "Inconsistent data type! Please re-enter data which either has the data type list or tuple.")
 
-        # Handing + operator overloading
+    # Handing + operator overloading
     def __add__(self, other):
         temp_list = []
         if type(other) in (list, tuple):
@@ -117,6 +117,7 @@ class ListV2:
     # Handing - operator overloading
     def __sub__(self, other):
         temp_list = []
+
         if type(other) in (list, tuple):
             for i in range(len(self.iterable)):
                 temp_list.append(self.iterable[i] - other[i])
@@ -132,9 +133,10 @@ class ListV2:
                 temp_list.append(self.iterable[i] - other)
             return (ListV2(temp_list))
 
-# Handing * operator overloading
+    # Handing * operator overloading
     def __mul__(self, other):
         temp_list = []
+
         if type(other) in (list, tuple):
             for i in range(len(self.iterable)):
                 temp_list.append(self.iterable[i] * other[i])
@@ -153,6 +155,7 @@ class ListV2:
     # Handing / operator overloading
     def __truediv__(self, other):
         temp_list = []
+
         if type(other) in (list, tuple):
             for i in range(len(self.iterable)):
                 temp_list.append(round(self.iterable[i] / other[i], 2))
@@ -176,7 +179,7 @@ class ListV2:
         if self.index < len(self.iterable):
             ans = self.iterable[self.index]
             self.index += 1
-            return ans
+            return ListV2(ans)
         else:
             raise StopIteration
 
