@@ -65,25 +65,22 @@
         },
         {
             "name": "test_ListV2_10 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: argument of type 'type' is not iterable\n",
             "visibility": "visible",
             "number": "2.10"
         },
         {
             "name": "test_ListV2_11 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: argument of type 'type' is not iterable\n",
             "visibility": "visible",
             "number": "2.11"
         },
         {
             "name": "test_ListV2_12 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: argument of type 'type' is not iterable\n",
             "visibility": "visible",
             "number": "2.12"
         },
@@ -119,7 +116,7 @@
             "name": "test_ListV2_17 (test_assignment4.TestAssignment4)",
             "score": 0.0,
             "max_score": 3,
-            "output": "Test Failed: '<assignment4.ListV2 object at 0x7f93d012b670>' != '[5, 6, 7, 8, 9]'\n- <assignment4.ListV2 object at 0x7f93d012b670>\n+ [5, 6, 7, 8, 9]\n\n",
+            "output": "Test Failed: '<assignment4.ListV2 object at 0x7fb970213670>' != '[5, 6, 7, 8, 9]'\n- <assignment4.ListV2 object at 0x7fb970213670>\n+ [5, 6, 7, 8, 9]\n\n",
             "visibility": "visible",
             "number": "2.17"
         },
@@ -146,49 +143,43 @@
         },
         {
             "name": "test_ListV2_4 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: argument of type 'type' is not iterable\n",
             "visibility": "visible",
             "number": "2.4"
         },
         {
             "name": "test_ListV2_5 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: argument of type 'type' is not iterable\n",
             "visibility": "visible",
             "number": "2.5"
         },
         {
             "name": "test_ListV2_6 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: argument of type 'type' is not iterable\n",
             "visibility": "visible",
             "number": "2.6"
         },
         {
             "name": "test_ListV2_7 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: argument of type 'type' is not iterable\n",
             "visibility": "visible",
             "number": "2.7"
         },
         {
             "name": "test_ListV2_8 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: argument of type 'type' is not iterable\n",
             "visibility": "visible",
             "number": "2.8"
         },
         {
             "name": "test_ListV2_9 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: argument of type 'type' is not iterable\n",
             "visibility": "visible",
             "number": "2.9"
         },
@@ -236,25 +227,22 @@
         },
         {
             "name": "test_ex5_1 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: cannot unpack non-iterable NoneType object\n",
             "visibility": "visible",
             "number": "5.1"
         },
         {
             "name": "test_ex5_2 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: cannot unpack non-iterable NoneType object\n",
             "visibility": "visible",
             "number": "5.2"
         },
         {
             "name": "test_ex5_3 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: cannot unpack non-iterable NoneType object\n",
             "visibility": "visible",
             "number": "5.3"
         }
@@ -262,5 +250,5 @@
     "leaderboard": [],
     "visibility": "visible",
     "execution_time": "0.00",
-    "score": 66.0
+    "score": 102.0
 }

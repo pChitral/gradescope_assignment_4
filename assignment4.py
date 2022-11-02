@@ -104,7 +104,7 @@ class ListV2:
                 temp_list.append(self.iterable[i] + other[i])
             return (ListV2(temp_list))
 
-        if type(other) in (ListV2):
+        if type(other) == (ListV2):
             for i in range(len(self.iterable)):
                 temp_list.append(self.iterable[i] + other.iterable[i])
             return (ListV2(temp_list))
@@ -123,7 +123,7 @@ class ListV2:
                 temp_list.append(self.iterable[i] - other[i])
             return (ListV2(temp_list))
 
-        if type(other) in (ListV2):
+        if type(other) == (ListV2):
             for i in range(len(self.iterable)):
                 temp_list.append(self.iterable[i] - other.iterable[i])
             return (ListV2(temp_list))
@@ -142,7 +142,7 @@ class ListV2:
                 temp_list.append(self.iterable[i] * other[i])
             return (ListV2(temp_list))
 
-        if type(other) in (ListV2):
+        if type(other) == (ListV2):
             for i in range(len(self.iterable)):
                 temp_list.append(self.iterable[i] * other.iterable[i])
             return (ListV2(temp_list))
@@ -161,14 +161,15 @@ class ListV2:
                 temp_list.append(round(self.iterable[i] / other[i], 2))
             return (ListV2(temp_list))
 
-        if type(other) in (ListV2):
+        if type(other) == (ListV2):
             for i in range(len(self.iterable)):
-                temp_list.append(round(self.iterable[i] / other[i], 2))
+                temp_list.append(
+                    round(self.iterable[i] / other.iterable[i], 2))
             return (ListV2(temp_list))
 
         if type(other) in (float, int):
             for i in range(len(self.iterable)):
-                temp_list.append(round(self.iterable[i] / other[i], 2))
+                temp_list.append(round(self.iterable[i] / other, 2))
             return (ListV2(temp_list))
 
     def __iter__(self):
@@ -237,11 +238,11 @@ def ex4(filename):
     # BEGIN SOLUTION
 
     with open(filename, 'r') as file:
-        temp_list = []
+        list_of_lines = []
         for line in file:
             if not line.strip():  # used for skipping empty lines!
                 continue
-            temp_list.append(line.strip("\n"))
+            list_of_lines.append(line.strip("\n"))
 
     def avg_to_grade(string_student_names_marks):
         name = string_student_names_marks.split(",")[0]
@@ -258,7 +259,7 @@ def ex4(filename):
             return name + ": A"
 
     final_answer = list(map(lambda string_student_names_marks: avg_to_grade(
-        string_student_names_marks), temp_list))
+        string_student_names_marks), list_of_lines))
 
     return (lambda string_student_names_marks: avg_to_grade(string_student_names_marks), final_answer)
 
@@ -275,5 +276,6 @@ def ex5(filename):
         grades = json.load(infile)
 
     # BEGIN SOLUTION
-    pass
+    return (lambda dictionary: float(dictionary["test3"]), sorted(grades, key=lambda dictionary: float(dictionary["test3"])))
+
     # END SOLUTION
