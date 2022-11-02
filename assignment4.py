@@ -202,7 +202,7 @@ def ex3(filename):
         with open(filename, 'r') as file:
             temp_list = []
             for line in file:
-                if not line.strip():  # used for skipping empty lines!
+                if not line.strip():
                     continue
                 temp_list.append(line.strip("\n"))
             return temp_list
