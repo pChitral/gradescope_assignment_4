@@ -117,7 +117,6 @@ class ListV2:
     # Handing - operator overloading
     def __sub__(self, other):
         temp_list = []
-
         if type(other) in (list, tuple):
             for i in range(len(self.iterable)):
                 temp_list.append(self.iterable[i] - other[i])
@@ -136,7 +135,6 @@ class ListV2:
     # Handing * operator overloading
     def __mul__(self, other):
         temp_list = []
-
         if type(other) in (list, tuple):
             for i in range(len(self.iterable)):
                 temp_list.append(self.iterable[i] * other[i])
@@ -155,7 +153,6 @@ class ListV2:
     # Handing / operator overloading
     def __truediv__(self, other):
         temp_list = []
-
         if type(other) in (list, tuple):
             for i in range(len(self.iterable)):
                 temp_list.append(round(self.iterable[i] / other[i], 2))
@@ -171,6 +168,9 @@ class ListV2:
             for i in range(len(self.iterable)):
                 temp_list.append(round(self.iterable[i] / other, 2))
             return (ListV2(temp_list))
+
+    def __repr__(self):
+        return f"[{', '.join(map(str, self.iterable))}]"
 
     def __iter__(self):
         self.index = 0
