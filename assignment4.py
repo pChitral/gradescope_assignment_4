@@ -179,7 +179,7 @@ class ListV2:
         if self.index < len(self.iterable):
             ans = self.iterable[self.index]
             self.index += 1
-            return ListV2(ans)
+            return (ans)
         else:
             raise StopIteration
 
@@ -197,7 +197,20 @@ def ex3(filename):
     # output: (lambda_func, line_with_min_student) -- example (lambda_func, 'student1,33,34,35,36,45')
 
     # BEGIN SOLUTION
-    pass
+    def read_file(filename):
+        with open(filename, 'r') as file:
+            temp_list = []
+            for line in file:
+                if not line.strip():  # used for skipping empty lines!
+                    continue
+                temp_list.append(line.strip("\n"))
+            return temp_list
+
+    student_with_min_avg = min(read_file(filename), key=lambda list: sum(map(int, list.split(",")[1:])) / 5)
+
+    return (lambda list: sum(map(int, list.split(",")[1:])) / 5, student_with_min_avg)
+
+
     # END SOLUTION
 
 

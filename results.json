@@ -89,33 +89,29 @@
         },
         {
             "name": "test_ListV2_13 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: Inconsistent data type! Please re-enter data which either has the data type list or tuple.\n",
             "visibility": "visible",
             "number": "2.13"
         },
         {
             "name": "test_ListV2_14 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: Inconsistent data type! Please re-enter data which either has the data type list or tuple.\n",
             "visibility": "visible",
             "number": "2.14"
         },
         {
             "name": "test_ListV2_15 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: Inconsistent data type! Please re-enter data which either has the data type list or tuple.\n",
             "visibility": "visible",
             "number": "2.15"
         },
         {
             "name": "test_ListV2_16 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: Inconsistent data type! Please re-enter data which either has the data type list or tuple.\n",
             "visibility": "visible",
             "number": "2.16"
         },
@@ -123,7 +119,7 @@
             "name": "test_ListV2_17 (test_assignment4.TestAssignment4)",
             "score": 0.0,
             "max_score": 3,
-            "output": "Test Failed: '<assignment4.ListV2 object at 0x7f8a38166250>' != '[5, 6, 7, 8, 9]'\n- <assignment4.ListV2 object at 0x7f8a38166250>\n+ [5, 6, 7, 8, 9]\n\n",
+            "output": "Test Failed: '<assignment4.ListV2 object at 0x7f9d102bb670>' != '[5, 6, 7, 8, 9]'\n- <assignment4.ListV2 object at 0x7f9d102bb670>\n+ [5, 6, 7, 8, 9]\n\n",
             "visibility": "visible",
             "number": "2.17"
         },
@@ -198,25 +194,22 @@
         },
         {
             "name": "test_ex3_1 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: cannot unpack non-iterable NoneType object\n",
             "visibility": "visible",
             "number": "3.1"
         },
         {
             "name": "test_ex3_2 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: cannot unpack non-iterable NoneType object\n",
             "visibility": "visible",
             "number": "3.2"
         },
         {
             "name": "test_ex3_3 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: cannot unpack non-iterable NoneType object\n",
             "visibility": "visible",
             "number": "3.3"
         },
@@ -272,5 +265,5 @@
     "leaderboard": [],
     "visibility": "visible",
     "execution_time": "0.00",
-    "score": 36.0
+    "score": 57.0
 }
