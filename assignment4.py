@@ -206,10 +206,10 @@ def ex3(filename):
                 temp_list.append(line.strip("\n"))
             return temp_list
 
-    student_with_min_avg = min(read_file(filename), key=lambda list: sum(map(int, list.split(",")[1:])) / 5)
+    student_with_min_avg = min(read_file(filename), key=lambda list: sum(
+        map(int, list.split(",")[1:])) / 5)
 
     return (lambda list: sum(map(int, list.split(",")[1:])) / 5, student_with_min_avg)
-
 
     # END SOLUTION
 
@@ -235,7 +235,33 @@ def ex4(filename):
     # HINT: create a function
 
     # BEGIN SOLUTION
-    pass
+
+    with open(filename, 'r') as file:
+        temp_list = []
+        for line in file:
+            if not line.strip():  # used for skipping empty lines!
+                continue
+            temp_list.append(line.strip("\n"))
+
+    def avg_to_grade(string_student_names_marks):
+        name = string_student_names_marks.split(",")[0]
+        avg_marks = round(
+            sum(map(int, string_student_names_marks.split(",")[1:])) / 5)
+
+        if avg_marks >= 65 and avg_marks < 70:
+            return name + ": D"
+        if avg_marks >= 70 and avg_marks < 80:
+            return name + ": C"
+        if avg_marks >= 80 and avg_marks < 90:
+            return name + ": B"
+        if avg_marks >= 90:
+            return name + ": A"
+
+    final_answer = list(map(lambda string_student_names_marks: avg_to_grade(
+        string_student_names_marks), temp_list))
+
+    return (lambda string_student_names_marks: avg_to_grade(string_student_names_marks), final_answer)
+
     # END SOLUTION
 
 

@@ -119,7 +119,7 @@
             "name": "test_ListV2_17 (test_assignment4.TestAssignment4)",
             "score": 0.0,
             "max_score": 3,
-            "output": "Test Failed: '<assignment4.ListV2 object at 0x7f9d102bb670>' != '[5, 6, 7, 8, 9]'\n- <assignment4.ListV2 object at 0x7f9d102bb670>\n+ [5, 6, 7, 8, 9]\n\n",
+            "output": "Test Failed: '<assignment4.ListV2 object at 0x7f93d012b670>' != '[5, 6, 7, 8, 9]'\n- <assignment4.ListV2 object at 0x7f93d012b670>\n+ [5, 6, 7, 8, 9]\n\n",
             "visibility": "visible",
             "number": "2.17"
         },
@@ -215,25 +215,22 @@
         },
         {
             "name": "test_ex4_1 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: cannot unpack non-iterable NoneType object\n",
             "visibility": "visible",
             "number": "4.1"
         },
         {
             "name": "test_ex4_2 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: cannot unpack non-iterable NoneType object\n",
             "visibility": "visible",
             "number": "4.2"
         },
         {
             "name": "test_ex4_3 (test_assignment4.TestAssignment4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "output": "Test Failed: cannot unpack non-iterable NoneType object\n",
             "visibility": "visible",
             "number": "4.3"
         },
@@ -265,5 +262,5 @@
     "leaderboard": [],
     "visibility": "visible",
     "execution_time": "0.00",
-    "score": 57.0
+    "score": 66.0
 }
