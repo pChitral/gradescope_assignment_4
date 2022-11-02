@@ -28,8 +28,23 @@ class IteratorClass:
             self.input_2) == tuple) else False
         isValidOperator = True if (self.operator in valid_operators) else False
 
+        """
+        The reason for assigining True and False values is that, I can throw more meaningful errors depending
+        on which case failed, unlike the generic error that I've mentioned in the following else clause, I can do so by paying heed to the variables
+        isValidList1, isValidList2 and isValidOperator.
+        """
+
         if (isValidList1 and isValidList2 and isValidOperator):
             pass
+        elif(not isValidList1):
+            raise ValueError(
+                "Inconsistent data types, please re-enter data in the form of a tuple or a list")
+        elif(not isValidList2):
+            raise ValueError(
+                "Inconsistent data types, please re-enter data in the form of a tuple or a list")
+        elif(not isValidOperator):
+            raise ValueError(
+                "Inconsistent data types, please re-enter the operator which is a string that can either be 'add', 'sub', 'mul', 'div'")
         else:
             raise ValueError(
                 "Inconsistent data types, please re-enter data in the valid data types")
@@ -200,17 +215,18 @@ def ex3(filename):
     # BEGIN SOLUTION
     def read_file(filename):
         with open(filename, 'r') as file:
-            temp_list = []
+            list_of_lines = []
             for line in file:
                 if not line.strip():
                     continue
-                temp_list.append(line.strip("\n"))
-            return temp_list
+                list_of_lines.append(line.strip("\n"))
+            return list_of_lines
 
-    student_with_min_avg = min(read_file(filename), key=lambda list: sum(
-        map(int, list.split(",")[1:])) / 5)
+    # To make the code more generalized I can use len(string) instead of writing 5, but it has been mentioned in the question that we have 5 test scores and hence I used 5.
+    student_with_min_avg = min(read_file(filename), key=lambda string: sum(
+        map(int, string.split(",")[1:])) / 5)
 
-    return (lambda list: sum(map(int, list.split(",")[1:])) / 5, student_with_min_avg)
+    return (lambda string: sum(map(int, string.split(",")[1:])) / 5, student_with_min_avg)
 
     # END SOLUTION
 
